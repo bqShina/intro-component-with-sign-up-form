@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --red-color: hsl(0, 100%, 74%);
+  --green-color: hsl(154, 59%, 51%);
+  --blue-color: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background: var(--red-color) url(images/bg-intro-desktop.png);
+  background-size: cover;
+  font-size: 16px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  padding: 6%;
+  align-items: center;
+  min-height: 100vh;
+}
+
+section {
+  padding: 0 15%;
+}
+
+/***************** Intro Text ******************/
+.intro {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro h1 {
+  font-size: 45px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+/***************** Signup Form ******************/
+
+.signup-form h2 span {
+  font-weight: 600;
+}
+
+.signup-form h2 {
+  font-size: 16px;
+  font-weight: 400;
+  background-color: var(--blue-color);
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  padding: 4% 12%;
+  margin-bottom: 25px;
+  box-shadow: 0px 8px 0px 0px hsla(249, 16%, 31%, 0.322);
+}
+
+/******* Error Style *******/
+.error .input {
+  position: relative;
+}
+
+.error .input .error-icon {
+  display: inline-block;
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.error .form-input {
+  border: 2px solid var(--red-color);
+}
+
+.error small {
+  font-size: 12px;
+  font-style: italic;
+  display: block;
+  text-align: right;
+  color: var(--red-color);
+  margin-top: 6px;
+}
+
+/******* Normal Style *******/
+
+.error-icon,
+small {
+  display: none;
+}
+
+.form-control:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 8%;
+  border-radius: 8px;
+  box-shadow: 0px 8px 0px 0px hsla(248, 15%, 29%, 0.233);
+}
+
+form input {
+  font-size: 16px;
+  width: 100%;
+}
+
+.form-input {
+  border: 1px solid var(--grayish-blue);
+  border-radius: 5px;
+  padding: 5% 8%;
+  font-weight: 600;
+}
+
+.form-input:focus {
+  outline: 0;
+  border-color: var(--dark-blue);
+}
+
+form input[type="submit"] {
+  cursor: pointer;
+  background-color: var(--green-color);
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  padding: 5%;
+  font-weight: 500;
+  text-transform: uppercase;
+  box-shadow: inset 0px -4.5px 2px 0px hsla(154, 33%, 45%, 0.664);
+}
+
+form input[type="submit"]:hover {
+  opacity: 0.7;
+}
+
+form p {
+  text-align: center;
+  font-size: 12px;
+  color: var(--grayish-blue);
+  font-weight: 500;
+}
+
+form p a {
+  color: var(--red-color);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* Media Query */
+@media (max-width: 992px) {
+  main {
+    grid-template-columns: 100%;
+    margin-bottom: 100px;
+  }
+
+  .intro {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    background-image: url(images/bg-intro-mobile.png);
+  }
+  main {
+    padding: 10% 6%;
+  }
+
+  .intro,
+  .signup-form {
+    padding: 0;
+  }
+
+  .signup-form h2 {
+    padding: 7% 14%;
+  }
+
+  .signup-form *,
+  .signup-form h2,
+  .intro p {
+    font-size: 14px;
+  }
+
+  .signup-form p,
+  .signup-form p a {
+    font-size: 11.5px;
+  }
+  .signup-form p {
+    line-height: 2;
+  }
+  .intro h1 {
+    font-size: 28px;
+    font-weight: 600;
+  }
+
+  form input[type="submit"] {
+    padding: 6% 5%;
+  }
+}
