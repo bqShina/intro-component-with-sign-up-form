@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://bqshina.github.io/intro-component-with-sign-up-form/)
+- Live Site URL: [https://bqshina.github.io/intro-component-with-sign-up-form/](https://bqshina.github.io/intro-component-with-sign-up-form/)
 
 ## My process
 
@@ -38,7 +38,7 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Flex
+- CSS Flex
 - CSS Grid
 - Vanilla JavaScript
 
